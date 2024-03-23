@@ -44,4 +44,28 @@ After the containers are up, run the database migrations and seeders to set up t
 docker-compose exec app php artisan migrate --seed
 ```
 
+## Step 6: Run automated tests
+
+```bash
+docker-compose exec app php artisan test
+```
+
+## Step 7: Import insomnia file
+
+Inside project there is a Insomnia file with all endpoints. You can import in your local workspace.
+
+```bash
+Insomnia_2024-03-23.json
+```
+
+## Step 7: Documentation of routes
+
+In the project there is a Laravel Scramble package to show all routes and with all details, like payload examples etc.
+
+To access doc just put follow route:
+
+```bash
+http://127.0.0.1:8000/docs/api
+```
+
 You should now have the project running on your local development environment. For more detailed instructions or troubleshooting, refer to the project's documentation or contact the development team.
