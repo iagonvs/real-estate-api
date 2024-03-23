@@ -21,7 +21,7 @@ Route::post('/register', [RegisterController::class, 'register'])->name('create.
 Route::post('/login', [LoginController::class, 'login'])->name('make.login');
 
 Route::middleware(['auth:sanctum', 'token.expired'])->group(function () {
-    Route::post('/logout', [LoginController::class, 'logout']);
+    Route::post('/logout', [LoginController::class, 'logout'])->name('make.logout');
 
     Route::prefix('tasks')->group(function () {
         Route::get('/', [TaskController::class, 'get'])->name('get.tasks');
