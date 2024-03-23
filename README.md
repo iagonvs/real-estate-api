@@ -70,4 +70,76 @@ To access doc just put follow route:
 http://127.0.0.1:8000/docs/api
 ```
 
+## Step 9: Using API
+
+### Seeds
+
+There are two seeders to create content to Buildings and Statuses table. (Is in STEP 5);
+
+### Authentication
+
+The routes to create and get a task, and create a comment needs to have a bearer token.
+
+To generate just need use the registration route (api/register) and to make a login route(api/login)
+
+```bash
+POST:
+Registration payload:
+
+{
+  "name": "real estate api",
+  "email": "real-estate-api@state.com",
+  "password": "realestateapi",
+}
+
+POST:
+Login payload:
+
+{
+  "email": "real-estate-api@state.com",
+  "password": "realestateapi",
+}
+```
+
+To create a Task you can use this route: api/tasks
+
+```bash
+POST:
+{
+  "title": "string",
+  "address": "string",
+  "description": "string",
+  "status_id": "1" // 1 (OPEN), 2 (IN_PROGRESS), 3 (COMPLETED), 4 (REFUSED),
+  "user_id": 0,
+  "building_id": 0
+}
+```
+
+To get a task with filters. All attributes are optionals: api /tasks
+
+```bash
+GET:
+{
+  "date_from": "string",
+  "date_to": "string",
+  "status_id": "1" // 1 (OPEN), 2 (IN_PROGRESS), 3 (COMPLETED), 4 (REFUSED),
+  "building_id": 0
+}
+
+OR to get all
+GET:
+{
+}
+```
+
+To make a comment to specific task: api/comments/{task}
+
+```bash
+POST:
+{
+  "content": "string"
+}
+```
+
+
 You should now have the project running on your local development environment. For more detailed instructions or troubleshooting, refer to the project's documentation or contact the development team.
