@@ -20,20 +20,20 @@ Copy the `.env.example` file to create a `.env` file with your environment varia
 cp .env.example .env
 ```
 
-## Step 3: Install Dependencies
-
-Install the project's PHP dependencies with Composer:
-
-```bash
-composer install
-```
-
-## Step 4: Build and Run with Docker
+## Step 3: Build and Run with Docker
 
 Use Docker Compose to build and start the project containers:
 
 ```bash
 docker-compose up -d --build
+```
+
+## Step 4: Install Dependencies
+
+Install the project's PHP dependencies with Composer:
+
+```bash
+docker-compose exec app composer install
 ```
 
 ## Step 5: Database Migrations and Seeders
