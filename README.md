@@ -58,7 +58,7 @@ Inside project there is a Insomnia file with all endpoints. You can import in yo
 Insomnia_2024-03-23.json
 ```
 
-## Step 7: Documentation of routes
+## Step 8: Documentation of routes
 
 In the project there is a Laravel Scramble package to show all routes and with all details, like payload examples etc.
 
