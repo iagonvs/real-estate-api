@@ -142,4 +142,4 @@ POST:
 ```
 
 
-You should now have the project running on your local development environment. For more detailed instructions or troubleshooting, refer to the project's documentation or contact the development team.
+You should now have the project running on your local development environment. For more detailed instructions or troubleshooting, refer to the project's documentation or contact with me.
