@@ -60,7 +60,7 @@ Insomnia_2024-03-23.json
 
 ## Step 8: Documentation of routes
 
-![Doc](https://drive.google.com/file/d/1QGROHI4sKqtWLnBKFUeQaZwWleUqOa9c/view?usp=drive_link)
+![Doc](https://drive.google.com/file/d/1QGROHI4sKqtWLnBKFUeQaZwWleUqOa9c/view?usp=sharing)
 
 In the project there is a Laravel Scramble package to show all routes and with all details, like payload examples etc.
 
