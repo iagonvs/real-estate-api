@@ -8,7 +8,7 @@ services:
     environment:
       APP_NAME: Laravel
       APP_ENV: local
-      APP_KEY: base64:SomeRandomStringWith32Characters
+      APP_KEY: base64:m96dB21DZFtP/5v6v/E4hNNYWy98ABn85HW6fQQBqos=
       APP_DEBUG: true
       DB_CONNECTION: pgsql
       DB_HOST: db
