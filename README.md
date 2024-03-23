@@ -60,6 +60,8 @@ Insomnia_2024-03-23.json
 
 ## Step 8: Documentation of routes
 
+![img.png](img.png)
+
 In the project there is a Laravel Scramble package to show all routes and with all details, like payload examples etc.
 
 To access doc just put follow route:
