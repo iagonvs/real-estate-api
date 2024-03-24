@@ -6,13 +6,12 @@ use App\Http\Middleware\CheckTokenExpiration;
 use App\Models\Comment;
 use App\Models\Task;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class CommentControllerTest extends TestCase
 {
-    use RefreshDatabase, WithFaker;
+    use WithFaker;
 
     protected function setUp(): void
     {

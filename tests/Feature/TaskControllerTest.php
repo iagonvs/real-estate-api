@@ -6,13 +6,12 @@ use App\Models\Building;
 use App\Models\Status;
 use App\Models\Task;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class TaskControllerTest extends TestCase
 {
-    use RefreshDatabase, WithFaker;
+    use WithFaker;
 
     protected function setUp(): void
     {
