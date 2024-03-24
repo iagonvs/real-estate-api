@@ -179,4 +179,12 @@ class TaskControllerTest extends TestCase
 
         $this->assertDatabaseHas(Task::class, $taskData);
     }
+
+    public function test_cant_store_task_and_should_return_status_422(): void
+    {
+        $this->actingAs($this->user)->postJson(route('create.tasks'), [])
+            ->assertUnprocessable();
+
+        $this->assertDatabaseEmpty(Task::class);
+    }
 }

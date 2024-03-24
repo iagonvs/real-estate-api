@@ -51,6 +51,8 @@ class CommentControllerTest extends TestCase
                     ]
                 ]
             ]);
+
+        $this->assertDatabaseEmpty(Comment::class);
     }
 
     public function test_try_store_comment_and_should_return_status_422(): void
@@ -70,6 +72,8 @@ class CommentControllerTest extends TestCase
                     ]
                 ]
             ]);
+
+        $this->assertDatabaseMissing(Comment::class, ['content' => 123]);
     }
 
     public function test_can_store_comment_and_should_return_status_201(): void
