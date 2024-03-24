@@ -36,6 +36,42 @@ class CommentControllerTest extends TestCase
         $this->postJson(route('create.comments', $this->task))->assertForbidden();
     }
 
+    public function test_cant_store_comment_and_should_return_status_422(): void
+    {
+        $this->withMiddleware();
+        $this->withoutMiddleware(CheckTokenExpiration::class);
+
+        $this->actingAs($this->user)->postJson(route('create.comments', $this->task), [])
+            ->assertUnprocessable()
+            ->assertExactJson([
+                'message' => 'The content field is required.',
+                'errors' => [
+                    'content' =>  [
+                        'The content field is required.'
+                    ]
+                ]
+            ]);
+    }
+
+    public function test_try_store_comment_and_should_return_status_422(): void
+    {
+        $this->withMiddleware();
+        $this->withoutMiddleware(CheckTokenExpiration::class);
+
+        $this->actingAs($this->user)->postJson(route('create.comments', $this->task), [
+            'content' => 123,
+        ])
+            ->assertUnprocessable()
+            ->assertExactJson([
+                'message' => 'The content field must be a string.',
+                'errors' => [
+                    'content' =>  [
+                        'The content field must be a string.'
+                    ]
+                ]
+            ]);
+    }
+
     public function test_can_store_comment_and_should_return_status_201(): void
     {
         $this->withMiddleware();
